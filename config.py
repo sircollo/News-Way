@@ -1,7 +1,11 @@
 import os
 
+from instance.config import NEWS_API_KEY
+
 class Config:
-  pass
+  
+  NEWS_API_KEY = os.environ.get('NEWS_API_KEY') 
+
 
 
 
