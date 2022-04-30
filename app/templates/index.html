@@ -1,0 +1,43 @@
+{% import 'macros.html' as macro %}
+
+
+
+<h3>Technology</h3>
+<ul>
+  {{ macro.displaySources(tech_news)}}
+  <!-- {% for tech in tech_news %}
+  <li>{{tech.name}}</li>
+  {% endfor%} -->
+</ul>
+
+<h3>Business</h3>
+<ul>
+  {{ macro.displaySources(business_news)}}
+</ul>
+<h3>Sports</h3>
+<ul>
+  {{ macro.displaySources(sports_news)}}
+
+</ul>
+<h3>Entertainment</h3>
+<ul>
+  {{ macro.displaySources(entertainment_news)}}
+ 
+</ul>
+<h3>Health</h3>
+<ul>
+  {{ macro.displaySources(health_news)}}
+
+</ul>
+<h3>General</h3>
+<ul>
+  {{ macro.displaySources(general_news)}}
+  
+</ul>
+
+<h3>Science</h3>
+<ul>
+  {{ macro.displaySources(science_news)}}
+
+</ul>
+
