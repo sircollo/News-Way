@@ -1,7 +1,7 @@
-from flask import render_template
+from flask import render_template,request,redirect,url_for
 from . import main
-from ..requests import get_news
-from ..models import sources
+from ..requests import get_news, get_articles
+from ..models import sources,articles
 #views
 @main.route('/')
 def index():
@@ -17,3 +17,12 @@ def index():
   general_sources = get_news('general')
   science_sources = get_news('science')
   return render_template('index.html',title=title, tech_news = tech_sources, business_news = business_sources, sports_news = sports_sources,health_news = health_sources, entertainment_news = entertainment_sources, general_news = general_sources, science_news = science_sources)
+
+@main.route('/sources/<id>')
+def articles(id):
+   '''
+   View articles function to return more details of a source
+   '''
+   articles = get_articles(id)
+  #  title = f'{articles.author}'
+   return render_template('articles.html', articles=articles)
