@@ -46,5 +46,5 @@ This is a python Flask web application that uses NewsAPI to help a user list and
 sircollo71@gmail.com
 
 ## License
-* [MIT](https://github.com/sircollo/News-Way/blob/main/LICENSE)
+* [MIT](https://github.com/sircollo/News-Way/blob/master/LICENSE)
 * Copyright (c) 2022 **Collins Sirwani**
