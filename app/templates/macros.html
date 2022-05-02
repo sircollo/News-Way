@@ -1,8 +1,20 @@
 {% macro displaySources(news_list) %}
 
-  {% for source in news_list %}
-    <li>{{source.name}}</li>
-    {{ source.description }}
-  {% endfor%}
-
-{% endmacro %}
+	{% for sources in news_list |batch(4)%}
+        <div class="row">        	
+            {% for source in sources %}
+	            <div class="col-md-3">		           
+		            <div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="/sources/{{source.id}}">{{ source.name}}</a>
+						</div>
+						<div class="panel-body">
+							<p>{{ source.description |truncate(90)}}</p>
+							<a href="/sources/{{source.id}}" class="btn btn-secondary">View {{ source.name}}</a>
+						</div>							
+					</div>
+		        </div>
+            {% endfor %}	        	
+        </div>
+    {% endfor %}
+{%endmacro %}
