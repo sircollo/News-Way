@@ -1,2 +1,4 @@
 news_env/
 *.pyc
+instance/
+start.sh
