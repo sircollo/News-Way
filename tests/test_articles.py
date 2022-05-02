@@ -10,7 +10,7 @@ class ArticlesTest(unittest.TestCase):
     '''
     setup method to run before each test
     '''
-    self.new_article = Articles('techcrunch','TechCrunch','Greg Kumarak',"Elon's big week - TechCrunch",'TechCrunch Week in Review welcomes its new host, Greg Kumparak','https://techcrunch.com/2022/04/30/elons-big-week/','https://techcrunch.com/wp-content/uploads/2019/07/DSCF2578.jpg?w=600",','2022-04-30T20:07:58Z','Hi!\r\nI’m Greg Kumparak.\r\nI’ll be heading up Week in Review for the foreseeable future')
+    self.new_article = Articles('cnn','CNN staff',"READ: Biden's full White House Correspondents' Dinner remarks",'President Joe Biden spoke Saturday at the White House Correspondent','www.cnn.com','www.cnn.com','2022-05-01T16:34:25Z')
   
   def test_instance(self):
     self.assertTrue(isinstance(self.new_article,Articles))
